@@ -107,7 +107,38 @@ class _KakaoMapState extends State<KakaoMap> {
   }
 
   String _loadMap() {
-    return _htmlWrapper('''<script>
+    return _htmlWrapper('''
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap');
+    * {
+        font-family: 'Nanum Gothic Coding', monospace;
+    }
+    .custom-overlay {
+        position: absolute;
+        width: 300px;
+        height: 200px;
+        border-radius: 14px;
+        display: flex;
+        flex-direction: column;
+        background-color: #EFEFEF;
+    }
+    
+    .custom-overlay::after {
+      border-top: 20px solid #EFEFEF;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-bottom: 0px solid transparent;
+      content: "";
+      position: absolute;
+      top: 200px;
+      left: 135px;
+    }
+
+    ol {
+        list-style: none;
+    }
+  </style>
+  <script>
   let map = null;
   let polylines = [];
   let circles = [];
