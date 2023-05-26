@@ -34,8 +34,8 @@ String _htmlWrapper(String script) {
       border-bottom: 0px solid transparent;
       content: "";
       position: absolute;
-      top: 200px;
-      left: 135px;
+      top: 90px;
+      left: 95px;
     }
   </style>
 </head>
