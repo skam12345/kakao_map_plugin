@@ -14,15 +14,6 @@ String _htmlWrapper(String script) {
     * {
         font-family: 'Nanum Gothic Coding', monospace;
     }
-    .custom-overlay {
-        position: absolute;
-        width: 300px;
-        height: 200px;
-        border-radius: 14px;
-        display: flex;
-        flex-direction: column;
-        background-color: #EFEFEF;
-    }
     
     .custom-overlay::after {
       border-top: 20px solid #EFEFEF;
