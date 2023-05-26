@@ -74,13 +74,13 @@ class KakaoMapController {
   }
 
   /// draw custom overlay
-  addCustomOverlay({List<CustomOverlay>? customOverlays, String? name, String? phone, String? car}) async {
+  addCustomOverlay({List<CustomOverlay>? customOverlays}) async {
     if (customOverlays != null) {
       clearCustomOverlay();
 
       for (var customOverlay in customOverlays) {
         await _webViewController.runJavaScript(
-            "addCustomOverlay('${customOverlay.customOverlayId}', '${jsonEncode(customOverlay.latLng)}', '${name}', '${phone}', '${car}', '${customOverlay.isClickable}')");
+            "addCustomOverlay('${customOverlay.customOverlayId}', '${jsonEncode(customOverlay.latLng)}', '${customOverlay.content}', '${customOverlay.isClickable}')");
       }
     }
   }
