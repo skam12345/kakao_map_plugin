@@ -14,6 +14,18 @@ String _htmlWrapper(String script) {
     * {
         font-family: 'Nanum Gothic Coding', monospace;
     }
+    .custom-overlay {
+        position: absolute; 
+        left: 0; 
+        bottom: 60px; 
+        width: 200px;
+        height: 90px; 
+        margin-left: -100px; 
+        border-radius: 14px; 
+        overflow: hidden; 
+        background-color: 
+        white; border: 0.5px solid #6886FD;
+    }
     
     .custom-overlay::after {
       border-top: 20px solid #EFEFEF;
