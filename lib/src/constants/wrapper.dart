@@ -23,19 +23,19 @@ String _htmlWrapper(String script) {
         margin-left: -100px; 
         border-radius: 14px; 
         overflow: hidden; 
-        background-color: 
-        white; border: 0.5px solid #6886FD;
+        background-color: white; 
     }
     
-    .custom-overlay::after {
+    .custom-overlay:after {
+      position: absolute;
       border-top: 20px solid #EFEFEF;
       border-left: 20px solid transparent;
       border-right: 20px solid transparent;
       border-bottom: 0px solid transparent;
       content: "";
-      position: absolute;
       top: 90px;
-      left: 95px;
+      left: 100px;
+      margin-left: -10px;
     }
   </style>
 </head>
