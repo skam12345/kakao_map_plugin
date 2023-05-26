@@ -836,7 +836,7 @@ class _KakaoMapState extends State<KakaoMap> {
     _mapController.addRectangle(rectangles: widget.rectangles);
     _mapController.addPolygon(polygons: widget.polygons);
     _mapController.addMarker(markers: widget.markers);
-    // _mapController.addCustomOverlay(customOverlays: widget.customOverlays);
+    _mapController.addCustomOverlay(customOverlays: widget.customOverlays);
     super.didUpdateWidget(oldWidget);
   }
 
