@@ -28,14 +28,14 @@ String _htmlWrapper(String script) {
     
     .custom-overlay:after {
       position: absolute;
-      border-top: 20px solid #EFEFEF;
+      border-top: 20px solid white;
       border-left: 20px solid transparent;
       border-right: 20px solid transparent;
       border-bottom: 0px solid transparent;
-      content: "";
+      content: "" ;
       top: 90px;
-      left: 100px;
-      margin-left: -10px;
+      left: 0;
+      margin-left: -5px;
     }
   </style>
 </head>
