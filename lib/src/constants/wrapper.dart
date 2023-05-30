@@ -10,16 +10,16 @@ String _htmlWrapper(String script) {
   <script type="text/javascript"
           src='https://dapi.kakao.com/v2/maps/sdk.js?autoload=true&appkey=${AuthRepository.instance.appKey}&libraries=services,clusterer,drawing'></script>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100;400&display=swap');
     * {
-        font-family: 'Nanum Gothic Coding', monospace;
+        font-family: 'Noto Sans KR', sans-serif;
     }
     .custom-overlay {
         position: absolute; 
         bottom: 60px; 
         width: 250px;
         height: 120px; 
-        margin-left: 0px; 
+        margin-left: -125px; 
         border-radius: 14px; 
         overflow: hidden; 
         display: flex;
