@@ -16,28 +16,44 @@ String _htmlWrapper(String script) {
     }
     .custom-overlay {
         position: absolute; 
-        left: 0; 
         bottom: 60px; 
-        width: 200px;
-        height: 90px; 
-        margin-left: -100px; 
+        width: 250px;
+        height: 120px; 
+        margin-left: 0px; 
         border-radius: 14px; 
         overflow: hidden; 
-        background-color: white; 
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .title-box {
+        width: 50px;
+        height: 120px;
+        font-size: 19pt;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center;
+        font-weight: bold;
     }
     
-    .custom-overlay:after {
-      index: 999;
-      position: absolute;
-      border-top: 20px solid white;
-      border-left: 20px solid transparent;
-      border-right: 20px solid transparent;
-      border-bottom: 0px solid transparent;
-      content: "" ;
-      top: 90px;
-      left: 0;
-      margin-left: -10px;
+    ol {
+        list-style: none;
+        margin-left: -20px;
+    }    
+
+    li {
+        margin-bottom: 8px;
     }
+   
+    b {
+        margin-right: 10px;
+    }
+    
+    
   </style>
 </head>
 
