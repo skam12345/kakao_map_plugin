@@ -27,6 +27,7 @@ String _htmlWrapper(String script) {
     }
     
     .custom-overlay:after {
+      index: 999;
       position: absolute;
       border-top: 20px solid white;
       border-left: 20px solid transparent;
@@ -35,7 +36,7 @@ String _htmlWrapper(String script) {
       content: "" ;
       top: 90px;
       left: 0;
-      margin-left: -5px;
+      margin-left: -10px;
     }
   </style>
 </head>
