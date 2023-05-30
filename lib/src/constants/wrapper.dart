@@ -46,7 +46,7 @@ String _htmlWrapper(String script) {
     }    
 
     li {
-        margin-bottom: 8px;
+        margin-bottom: 4px;
     }
    
     b {
