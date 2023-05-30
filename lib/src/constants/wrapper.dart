@@ -30,7 +30,7 @@ String _htmlWrapper(String script) {
     .title-box {
         width: 50px;
         height: 120px;
-        font-size: 19pt;
+        font-size: 15pt;
         display: flex;
         flex-direction: column;
         justify-content: center;
