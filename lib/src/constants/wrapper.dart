@@ -16,10 +16,10 @@ String _htmlWrapper(String script) {
     }
     .custom-overlay {
         position: absolute; 
-        bottom: 60px; 
-        width: 250px;
-        height: 120px; 
-        margin-left: -125px; 
+        bottom: 80px; 
+        width: 200px;
+        height: 90px; 
+        margin-left: -100px; 
         border-radius: 14px; 
         overflow: hidden; 
         display: flex;
@@ -29,8 +29,8 @@ String _htmlWrapper(String script) {
 
     .title-box {
         width: 50px;
-        height: 120px;
-        font-size: 15pt;
+        height: 90px;
+        font-size: 12pt;
         display: flex;
         flex-direction: column;
         justify-content: center;
