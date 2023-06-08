@@ -17,9 +17,9 @@ String _htmlWrapper(String script) {
     .custom-overlay {
         position: absolute; 
         bottom: 80px; 
-        width: 200px;
-        height: 90px; 
-        margin-left: -100px; 
+        width: 210px;
+        height: 105px; 
+        margin-left: -105px; 
         border-radius: 14px; 
         overflow: hidden; 
         display: flex;
@@ -29,7 +29,7 @@ String _htmlWrapper(String script) {
 
     .title-box {
         width: 50px;
-        height: 90px;
+        height: 105px;
         font-size: 12pt;
         display: flex;
         flex-direction: column;
