@@ -229,7 +229,7 @@ class KakaoMapController {
     await _webViewController.runJavaScriptReturningResult("coord2Address(37.56496830314491, 126.93990862062978);");
   }
 
- specificSetPositionMarker({Marker? marker}) async {
-    await _webViewController.runJavaScript("specificSetPositionMarker(${marker?.markerId}, ${marker?.latLng.latitude}, ${marker?.latLng.longitude});");
+ specificSetPositionMarker({Marker? before, Marker? marker}) async {
+    await _webViewController.runJavaScript("specificSetPositionMarker($before, $marker);");
  }
 }

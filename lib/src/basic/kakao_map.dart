@@ -537,16 +537,9 @@ class _KakaoMapState extends State<KakaoMap> {
       })
     }
 
-    function specificSetPositionMarker(markerId, latitude, longitude) {
-      let marker = null;
-      for (let i = 0; i < markers.length; i++) {
-        if (markerId === markers[i].markerId) {
-          marker = markers[i];
-          break;
-        }
-      }
-      marker.setPosition(new kakao.maps.LatLng(latitude longitude));
-      marker.setMap(map);
+    function specificSetPositionMarker(before, newMarker) {
+      before.setMap(null);
+      newMarker.setMap(map);
     }
 
     if (${widget.onMarkerTap != null}) {
