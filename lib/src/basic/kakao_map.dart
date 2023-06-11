@@ -537,7 +537,7 @@ class _KakaoMapState extends State<KakaoMap> {
       })
     }
 
-    function specificSetPositionMarker(markerId, lnt) {
+    function specificSetPositionMarker(markerId, latitude, longitude) {
       let marker = null;
       for (let i = 0; i < markers.length; i++) {
         if (markerId === markers[i].markerId) {
