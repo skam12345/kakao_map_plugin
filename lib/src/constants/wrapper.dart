@@ -16,7 +16,7 @@ String _htmlWrapper(String script) {
     }
     .custom-overlay {
         position: absolute; 
-        bottom: 80px; 
+        bottom: 50px; 
         width: 210px;
         height: 105px; 
         margin-left: -105px; 
