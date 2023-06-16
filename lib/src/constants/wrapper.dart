@@ -34,7 +34,6 @@ String _htmlWrapper(String script) {
 
     li {
         margin-bottom: 4px;
-        text-align: center;
     }
    
     b {
