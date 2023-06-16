@@ -30,7 +30,8 @@ String _htmlWrapper(String script) {
 
     
     ol {
-        list-style: none;
+      margin-left: -15px;
+      list-style: none;
     }    
 
     li {
