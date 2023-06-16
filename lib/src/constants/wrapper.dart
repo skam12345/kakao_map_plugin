@@ -27,26 +27,14 @@ String _htmlWrapper(String script) {
         align-items: center;
     }
 
-    .title-box {
-        width: 50px;
-        height: 105px;
-        font-size: 12pt;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        text-align: center;
-        font-weight: bold;
-    }
     
     ol {
         list-style: none;
-        margin-left: -20px;
     }    
 
     li {
         margin-bottom: 4px;
+        text-align: center;
     }
    
     b {
