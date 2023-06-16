@@ -17,20 +17,20 @@ String _htmlWrapper(String script) {
     .custom-overlay {
         position: absolute; 
         bottom: 50px; 
-        width: 160px;
+        width: 150px;
         height: 105px; 
-        margin-left: -80px; 
+        margin-left: -75px; 
         border-radius: 14px; 
         overflow: hidden; 
         display: flex;
         flex-direction: row;
         align-items: center;
+        justifyp-content: center;
     }
 
     
     ol {
         list-style: none;
-        margin-left: 5px;
     }    
 
     li {
