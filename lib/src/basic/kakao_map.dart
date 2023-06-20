@@ -579,9 +579,10 @@ class _KakaoMapState extends State<KakaoMap> {
   }
 
   function addClusterer() {
+
     if (clusterer == null) return;
 
-    clusterer.addMarker(markers);
+    clusterer.addMarkers(markers);
   }
 
   function initMarkerClusterer() {
