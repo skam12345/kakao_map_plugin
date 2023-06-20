@@ -132,7 +132,7 @@ class _KakaoMapState extends State<KakaoMap> {
 
     map = new kakao.maps.Map(container, options);
 
-    initMarkerClusterer();
+    // initMarkerClusterer();
 
     if (${widget.mapTypeControl}) {
       const mapTypeControl = new kakao.maps.MapTypeControl();
