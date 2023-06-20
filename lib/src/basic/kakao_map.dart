@@ -579,6 +579,7 @@ class _KakaoMapState extends State<KakaoMap> {
   }
 
   function initMarkers(markerId, latLng, draggable, width = 24, height = 30, offsetX = 0, offsetY = 0, imageSrc = '', infoWindowText = '', infoWindowRemovable = true, infoWindowFirstShow) {
+    markers = [];
     latLng = JSON.parse(latLng);
     let markerPosition = new kakao.maps.LatLng(latLng.latitude, latLng.longitude); // 마커가 표시될 위치입니다
 
