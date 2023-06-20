@@ -520,7 +520,7 @@ class _KakaoMapState extends State<KakaoMap> {
         }
         
         onMarkerDragChangeCallback.postMessage(JSON.stringify(resultLatLng));
-      })
+      });
 
       kakao.maps.event.addListener(marker, 'dragend', function () {
         let latLng = marker.getPosition();
@@ -534,7 +534,7 @@ class _KakaoMapState extends State<KakaoMap> {
         }
         
         onMarkerDragChangeCallback.postMessage(JSON.stringify(resultLatLng));
-      })
+      });
     }
 
     function specificSetPositionMarker(before, newMarker) {
@@ -579,9 +579,7 @@ class _KakaoMapState extends State<KakaoMap> {
   }
 
   function addClusterer() {
-
-    if (clusterer == null) return;
-
+    if(clusterer == null) return;
     clusterer.addMarkers(markers);
   }
 

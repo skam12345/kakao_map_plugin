@@ -87,7 +87,8 @@ class KakaoMapController {
 
   addClusterer() async {
     await _webViewController.runJavaScript(
-      "addClusterer()");
+      "addClusterer()"
+    );
   }
 
   /// clear overlays
