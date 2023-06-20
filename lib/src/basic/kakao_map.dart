@@ -132,7 +132,7 @@ class _KakaoMapState extends State<KakaoMap> {
 
     map = new kakao.maps.Map(container, options);
 
-    // initMarkerClusterer();
+    initMarkerClusterer();
 
     if (${widget.mapTypeControl}) {
       const mapTypeControl = new kakao.maps.MapTypeControl();
@@ -581,7 +581,7 @@ class _KakaoMapState extends State<KakaoMap> {
   function addClusterer() {
     if (clusterer == null) return;
 
-    clusterer.addMarker(marker);
+    clusterer.addMarker(markers);
   }
 
   function initMarkerClusterer() {
@@ -589,7 +589,7 @@ class _KakaoMapState extends State<KakaoMap> {
       map: map,
       gridSize: 35,
       averageCenter: true,
-      minLevel: 6,
+      minLevel: 5,
       disableClickZoom: true,
       styles: [{
         width: '53px', height: '52px',
@@ -842,6 +842,7 @@ class _KakaoMapState extends State<KakaoMap> {
     _mapController.addPolygon(polygons: widget.polygons);
     _mapController.addMarker(markers: widget.markers);
     _mapController.addCustomOverlay(customOverlays: widget.customOverlays);
+    _mapController.addClusterer();
     super.didUpdateWidget(oldWidget);
   }
 
