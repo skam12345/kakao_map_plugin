@@ -578,6 +578,77 @@ class _KakaoMapState extends State<KakaoMap> {
     }
   }
 
+  function initMarkers(markerId, latLng, draggable, width = 24, height = 30, offsetX = 0, offsetY = 0, imageSrc = '', infoWindowText = '', infoWindowRemovable = true, infoWindowFirstShow) {
+    latLng = JSON.parse(latLng);
+    let markerPosition = new kakao.maps.LatLng(latLng.latitude, latLng.longitude); // 마커가 표시될 위치입니다
+
+    // 마커를 생성합니다
+    let marker = new kakao.maps.Marker({
+      position: markerPosition,
+    });
+
+    marker['id'] = markerId;
+
+    marker.setDraggable(draggable);
+
+    if (imageSrc !== '' && imageSrc !== 'null') {
+      let imageSize = new kakao.maps.Size(width, height); // 마커이미지의 크기입니다
+      let imageOption = {offset: new kakao.maps.Point(offsetX, offsetY)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+
+      let markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption);
+      marker.setImage(markerImage);
+    }
+
+    markers.push(marker);
+
+    let infoWindow = null
+    if (infoWindowText !== '' && infoWindowText !== 'null') {
+
+      // 인포윈도우를 생성하고 지도에 표시합니다
+      infoWindow = new kakao.maps.InfoWindow({
+        position: markerPosition,
+        content: infoWindowText,
+        removable: infoWindowRemovable
+      });
+    }
+
+    if (infoWindowFirstShow) {
+      if (infoWindow != null) {
+        infoWindow.open(map, marker);
+      }
+    }
+
+    if (draggable && ${widget.onMarkerDragChangeCallback != null}) {
+    
+      kakao.maps.event.addListener(marker, 'dragstart', function () {
+        let latLng = marker.getPosition();
+
+        const resultLatLng = {
+          markerId: marker.id,
+          latitude: latLng.getLat(),
+          longitude: latLng.getLng(),
+          zoomLevel: map.getLevel(),
+          drag: 'dragstart'
+        }
+        
+        onMarkerDragChangeCallback.postMessage(JSON.stringify(resultLatLng));
+      });
+
+      kakao.maps.event.addListener(marker, 'dragend', function () {
+        let latLng = marker.getPosition();
+
+        const resultLatLng = {
+          markerId: marker.id,
+          latitude: latLng.getLat(),
+          longitude: latLng.getLng(),
+          zoomLevel: map.getLevel(),
+          drag: 'dragend'
+        }
+        
+        onMarkerDragChangeCallback.postMessage(JSON.stringify(resultLatLng));
+      });
+  }
+
   function addClusterer() {
     if(clusterer == null) return;
     clusterer.addMarkers(markers);
