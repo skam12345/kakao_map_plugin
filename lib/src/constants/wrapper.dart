@@ -45,16 +45,16 @@ String _htmlWrapper(String script) {
     .numbering01 {
       font-size: 18pt;
       font-weight: bolder;
-      margin-left: 15px;
+      margin-left: 12px;
       margin-top: 5px;
       
       color: white;
     }
     .numbering {
-      font-size: 13pt;
+      font-size: 10pt;
       font-weight: bolder;
-      margin-left: 8px;
-      margin-top: 3px;
+      margin-left: 3px;
+      margin-top: 1.5px;
       color: white;
     }
   </style>
