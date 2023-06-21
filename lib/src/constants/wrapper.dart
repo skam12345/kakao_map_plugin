@@ -39,7 +39,7 @@ String _htmlWrapper(String script) {
       width: 25px;
       height: 37px;
       margin-left: -10px;
-      background-image: url('https://i.imgur.com/T08Xnah.png');
+      background-image: url('https://i.imgur.com/MsYWVdO.png');
       background-size: 100% 100%;
     }
     .numbering01 {
