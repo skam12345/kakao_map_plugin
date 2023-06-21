@@ -53,7 +53,7 @@ String _htmlWrapper(String script) {
     .numbering {
       font-size: 10pt;
       font-weight: bolder;
-      margin-left: 3px;
+      margin-left: 10px;
       margin-top: 2px;
       color: white;
     }
