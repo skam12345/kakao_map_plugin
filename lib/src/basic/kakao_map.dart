@@ -616,17 +616,6 @@ class _KakaoMapState extends State<KakaoMap> {
       zIndex: 3
     });
 
-    customOverlay.addEventListener('click', function(e) {
-      const result = {
-        id: customOverlayId,
-        latLng: markerPosition,
-      };
-
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      //@ts-ignore
-      ChannelName.postMessage(JSON.stringify(result));
-    });
-
     customOverlay.setMap(map);
 
     customOverlays.push(customOverlay);

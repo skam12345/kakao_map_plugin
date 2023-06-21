@@ -79,9 +79,6 @@ class KakaoMapController {
         
       clearCustomOverlay();
       for (var customOverlay in customOverlays) {
-        _webViewController.addJavaScriptChannel('ChannelName',  onMessageReceived: (JavaScriptMessage message) {
-          customOverlay.customTap!(jsonDecode(message.toString())['id'], jsonDecode(message.toString())['latLng']);
-        });
         await _webViewController.runJavaScript(
             "addCustomOverlay('${customOverlay.customOverlayId}', '${jsonEncode(customOverlay.latLng)}', '${customOverlay.content}', '${customOverlay.isClickable}')");
       }
