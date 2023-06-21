@@ -623,18 +623,8 @@ class _KakaoMapState extends State<KakaoMap> {
 
 
     customOverlays.push(customOverlay);
-    var CustomOveray = document.querySelectorAll('#marker');
-    [].forEach.call(CustomOveray, function(custom) {
-      custom.addEventListenter("click", function(e) {
-        const result = {
-          id: customOverlayId,
-          latitude: latLng.getLat(),
-          longitude: latLng.getLng(), 
-        };
-
-        customMarker.postMessage(JSON.stringify(result));
-      });
-    });
+    var CustomOveray = document.querySelector('#marker');
+    CustomOveray.style.backgroundColor = 'red';
   }
 
 
