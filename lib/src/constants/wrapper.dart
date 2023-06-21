@@ -18,6 +18,7 @@ String _htmlWrapper(String script) {
       width: 15px;
       height: 15px;
       margin-left: -7.5px;
+      margin-top: 7.5px;
       background-image: url('https://i.imgur.com/y0MwemA.png');
       background-size: 100% 100%;
     }
