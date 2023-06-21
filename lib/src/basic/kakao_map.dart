@@ -626,7 +626,7 @@ class _KakaoMapState extends State<KakaoMap> {
       }
       customTap.postMessage(JSON.stringify(result));
     });
-    customTap = 
+    
     customOverlay.setMap(map);
 
     customOverlays.push(customOverlay);
