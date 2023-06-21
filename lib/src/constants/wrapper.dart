@@ -22,10 +22,10 @@ String _htmlWrapper(String script) {
       background-size: 100% 100%;
     }
     .destination {
-      width: 60px;
-      height: 58px;
-      margin-left: -40px;
-      background-image: url('https://i.imgur.com/qDiwhz6.png');
+      width: 30px;
+      height: 44px;
+      margin-left: -15px;
+      background-image: url('https://i.imgur.com/wfguwFl.png');
       background-size: 100% 100%;
     }
     .violate-marker01 {
