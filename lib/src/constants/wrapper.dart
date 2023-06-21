@@ -22,9 +22,9 @@ String _htmlWrapper(String script) {
       background-size: 100% 100%;
     }
     .destination {
-      width: 40px;
+      width: 60px;
       height: 58px;
-      margin-left: -20px;
+      margin-left: -40px;
       background-image: url('https://i.imgur.com/qDiwhz6.png');
       background-size: 100% 100%;
     }
