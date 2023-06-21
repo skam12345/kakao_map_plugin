@@ -36,8 +36,8 @@ String _htmlWrapper(String script) {
       background-size: 100% 100%;
     }
     .violate-marker {
-      width: 20px;
-      height: 29px;
+      width: 25px;
+      height: 37px;
       margin-left: -10px;
       background-image: url('https://i.imgur.com/T08Xnah.png');
       background-size: 100% 100%;
@@ -54,7 +54,7 @@ String _htmlWrapper(String script) {
       font-size: 10pt;
       font-weight: bolder;
       margin-left: 3px;
-      margin-top: 1.5px;
+      margin-top: 2px;
       color: white;
     }
   </style>
