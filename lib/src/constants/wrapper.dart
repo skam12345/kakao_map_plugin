@@ -18,28 +18,28 @@ String _htmlWrapper(String script) {
       width: 15px;
       height: 15px;
       margin-left: -7.5px;
-      background-image: url('https://image-upload1013.s3.ap-northeast-2.amazonaws.com/my_marker.png');
+      background-image: url('https://i.imgur.com/y0MwemA.png');
       background-size: 100% 100%;
     }
     .destination {
       width: 40px;
       height: 58px;
       margin-left: -20px;
-      background-image: url('https://image-upload1013.s3.ap-northeast-2.amazonaws.com/destination.png');
+      background-image: url('https://i.imgur.com/qDiwhz6.png');
       background-size: 100% 100%;
     }
     .violate-marker01 {
       width: 60px;
       height: 87px;
       margin-left: -30px;
-      background-image: url('https://image-upload1013.s3.ap-northeast-2.amazonaws.com/one_marker.png');
+      background-image: url('https://i.imgur.com/AKvXPSt.png');
       background-size: 100% 100%;
     }
     .violate-marker {
       width: 30px;
       height: 44px;
       margin-left: -15px;
-      background-image: url('https://image-upload1013.s3.ap-northeast-2.amazonaws.com/other_marker.png');
+      background-image: url('https://i.imgur.com/T08Xnah.png');
       background-size: 100% 100%;
     }
     .numbering01 {
