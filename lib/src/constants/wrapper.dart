@@ -18,7 +18,7 @@ String _htmlWrapper(String script) {
       width: 15px;
       height: 15px;
       margin-left: -7.5px;
-      margin-top: 15px;
+      margin-top: 30px;
       background-image: url('https://i.imgur.com/y0MwemA.png');
       background-size: 100% 100%;
     }
@@ -33,7 +33,7 @@ String _htmlWrapper(String script) {
       width: 30px;
       height: 44px;
       margin-left: -10px;
-      margin-top: 15px;
+      margin-top: 10px;
       background-image: url('https://i.imgur.com/AKvXPSt.png');
       background-size: 100% 100%;
     }
