@@ -12,7 +12,6 @@ class KakaoMap extends StatefulWidget {
   final OnCenterChangeCallback? onCenterChangeCallback;
   final OnBoundsChangeCallback? onBoundsChangeCallback;
   final OnTilesLoadedCallback? onTilesLoadedCallback;
-  final CustomTap? customTap;
   final bool? mapTypeControl;
   final ControlPosition mapTypeControlPosition;
   final bool? zoomControl;
@@ -58,7 +57,6 @@ class KakaoMap extends StatefulWidget {
     this.markers,
     this.clusterers,
     this.customOverlays,
-    this.customTap,
   }) : super(key: key);
 
   @override
@@ -622,11 +620,11 @@ class _KakaoMapState extends State<KakaoMap> {
       const result = {
         id: customOverlayId,
         latLng: markerPosition,
-      }
-      
+      };
+
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       //@ts-ignore
-      customOverlay.postMessage(JSON.stringify(result));
+      ChannelName.postMessage(JSON.stringify(result));
     });
 
     customOverlay.setMap(map);
@@ -965,12 +963,6 @@ class _KakaoMapState extends State<KakaoMap> {
             LatLng.fromJson(jsonDecode(result.message)),
             jsonDecode(result.message)['zoomLevel'],
           );
-        }
-      })
-      ..addJavaScriptChannel('customOverlay', onMessageReceived: (JavaScriptMessage result) {
-        if(widget.customTap != null) {
-          final data = jsonDecode(result.message);
-          widget.customTap!(data['id'], data['latLng']);
         }
       });
   }
