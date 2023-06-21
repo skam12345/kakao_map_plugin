@@ -623,6 +623,9 @@ class _KakaoMapState extends State<KakaoMap> {
         id: customOverlayId,
         latLng: markerPosition,
       }
+      
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      //@ts-ignore
       customOverlay.postMessage(JSON.stringify(result));
     });
 
