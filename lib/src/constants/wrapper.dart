@@ -29,27 +29,32 @@ String _htmlWrapper(String script) {
       background-size: 100% 100%;
     }
     .violate-marker01 {
-      width: 60px;
-      height: 87px;
-      margin-left: -30px;
+      width: 40px;
+      height: 58px;
+      margin-left: -20px;
       background-image: url('https://i.imgur.com/AKvXPSt.png');
       background-size: 100% 100%;
     }
     .violate-marker {
-      width: 30px;
-      height: 44px;
-      margin-left: -15px;
+      width: 20px;
+      height: 29px;
+      margin-left: -10px;
       background-image: url('https://i.imgur.com/T08Xnah.png');
       background-size: 100% 100%;
     }
     .numbering01 {
       font-size: 18pt;
       font-weight: bolder;
+      margin-left: 15px;
+      margin-top: 5px;
+      
       color: white;
     }
     .numbering {
       font-size: 13pt;
       font-weight: bolder;
+      margin-left: 8px;
+      margin-top: 3px;
       color: white;
     }
   </style>
