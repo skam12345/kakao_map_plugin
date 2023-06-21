@@ -29,9 +29,9 @@ String _htmlWrapper(String script) {
       background-size: 100% 100%;
     }
     .violate-marker01 {
-      width: 40px;
-      height: 58px;
-      margin-left: -20px;
+      width: 30px;
+      height: 44px;
+      margin-left: -15px;
       background-image: url('https://i.imgur.com/AKvXPSt.png');
       background-size: 100% 100%;
     }
@@ -43,7 +43,7 @@ String _htmlWrapper(String script) {
       background-size: 100% 100%;
     }
     .numbering01 {
-      font-size: 18pt;
+      font-size: 15pt;
       font-weight: bolder;
       margin-top: 5px;
       color: white;
