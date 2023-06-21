@@ -12,13 +12,13 @@ class CustomOverlay {
 
   final bool isClickable;
 
-  final CustomTap? customTap;
+  final int zIndex;
 
   CustomOverlay({
     required this.customOverlayId,
     required this.latLng,
     required this.content,
+    required this.zIndex,
     this.isClickable = true,
-    this.customTap,
   });
 }

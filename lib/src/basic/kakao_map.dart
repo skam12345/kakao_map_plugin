@@ -600,7 +600,7 @@ class _KakaoMapState extends State<KakaoMap> {
     });
   }
 
-  function addCustomOverlay(customOverlayId, latLng, content, isClickable) {
+  function addCustomOverlay(customOverlayId, latLng, content, isClickable, zIndex) {
     
     latLng = JSON.parse(latLng);
     let markerPosition = new kakao.maps.LatLng(latLng.latitude, latLng.longitude); // 마커가 표시될 위치입니다
@@ -613,7 +613,7 @@ class _KakaoMapState extends State<KakaoMap> {
       position: markerPosition,
       xAnchor: 0.5,
       yAnchor: 1,
-      zIndex: 3
+      zIndex: zIndex
     });
 
     customOverlay.setMap(map);
