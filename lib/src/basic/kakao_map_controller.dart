@@ -77,7 +77,6 @@ class KakaoMapController {
   addCustomOverlay({List<CustomOverlay>? customOverlays}) async {
     if (customOverlays != null) {
       clearCustomOverlay();
-
       for (var customOverlay in customOverlays) {
         await _webViewController.runJavaScript(
             "addCustomOverlay('${customOverlay.customOverlayId}', '${jsonEncode(customOverlay.latLng)}', '${customOverlay.content}', '${customOverlay.isClickable}')");

@@ -618,15 +618,14 @@ class _KakaoMapState extends State<KakaoMap> {
       zIndex: 3
     });
 
-    let customTap = document.getElementById('marker');
-    customTap.addEventListener('click', function(e) {
+    customOverlay.addEventListener('click', function(e) {
       const result = {
         id: customOverlayId,
         latLng: markerPosition,
       }
-      customTap.postMessage(JSON.stringify(result));
+      customOverlay.postMessage(JSON.stringify(result));
     });
-    
+
     customOverlay.setMap(map);
 
     customOverlays.push(customOverlay);
@@ -965,7 +964,7 @@ class _KakaoMapState extends State<KakaoMap> {
           );
         }
       })
-      ..addJavaScriptChannel('customTap', onMessageReceived: (JavaScriptMessage result) {
+      ..addJavaScriptChannel('customOverlay', onMessageReceived: (JavaScriptMessage result) {
         if(widget.customTap != null) {
           final data = jsonDecode(result.message);
           widget.customTap!(data['id'], data['latLng']);
