@@ -621,13 +621,13 @@ class _KakaoMapState extends State<KakaoMap> {
 
     customOverlay.setMap(map);
 
-
     customOverlays.push(customOverlay);
-    var CustomOveray = document.querySelector('#marker');
-    CustomOveray.style.backgroundColor = 'red';
+    
+    var overlays = document.querySelectorAll(".marker");
+    [].forEach.call(overlays, function(overlay) {
+      overlay.style.backgroundColor = "red";
+    });
   }
-
-
 
 
   function showInfoWindow(marker, latitude, longitude, contents = '', infoWindowRemovable) {
