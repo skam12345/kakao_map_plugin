@@ -14,35 +14,44 @@ String _htmlWrapper(String script) {
     * {
         font-family: 'Noto Sans KR', sans-serif;
     }
-    .custom-overlay {
-        position: absolute; 
-        bottom: 50px; 
-        width: 145px;
-        height: 105px; 
-        margin-left: -72.5px; 
-        border-radius: 14px; 
-        overflow: hidden; 
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justifyp-content: center;
+    .my-direction {
+      width: 15px;
+      height: 15px;
+      margin-left: -7.5px;
+      background-image: url('https://image-upload1013.s3.ap-northeast-2.amazonaws.com/my_marker.png');
+      background-size: 100% 100%;
     }
-
-    
-    ol {
+    .destination {
+      width: 40px;
+      height: 58px;
+      margin-left: -20px;
+      background-image: url('https://image-upload1013.s3.ap-northeast-2.amazonaws.com/destination.png');
+      background-size: 100% 100%;
+    }
+    .violate-marker01 {
+      width: 60px;
+      height: 87px;
+      margin-left: -30px;
+      background-image: url('https://image-upload1013.s3.ap-northeast-2.amazonaws.com/one_marker.png');
+      background-size: 100% 100%;
+    }
+    .violate-marker {
+      width: 30px;
+      height: 44px;
       margin-left: -15px;
-      list-style: none;
-    }    
-
-    li {
-        margin-bottom: 4px;
+      background-image: url('https://image-upload1013.s3.ap-northeast-2.amazonaws.com/other_marker.png');
+      background-size: 100% 100%;
     }
-   
-    b {
-        margin-right: 10px;
+    .numbering01 {
+      font-size: 18pt;
+      font-weight: bolder;
+      color: white;
     }
-    
-    
+    .numbering {
+      font-size: 13pt;
+      font-weight: bolder;
+      color: white;
+    }
   </style>
 </head>
 
