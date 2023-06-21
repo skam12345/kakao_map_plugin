@@ -47,13 +47,11 @@ String _htmlWrapper(String script) {
       font-weight: bolder;
       margin-left: 12px;
       margin-top: 5px;
-      
       color: white;
     }
     .numbering {
       font-size: 10pt;
       font-weight: bolder;
-      margin-left: 10px;
       margin-top: 2px;
       color: white;
     }
