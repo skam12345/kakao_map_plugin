@@ -630,6 +630,21 @@ class _KakaoMapState extends State<KakaoMap> {
     customMarker.postMessage(JSON.stringify(result));
   }
 
+  function getAddress(latLng) {
+    let latLngCoord = JSON.parse(latLng);
+    let address = '';
+    searchAddressFromCoords(latLngCoord, function(result, status) {
+      address = result[0].address.address_name;
+    });
+
+    return address;
+  }
+
+  function searchAddressFromCoords(latitude, longitude, callback) {
+    var geocoder = new kakao.maps.services.Geocoder();
+    geocoder.coord2Address(latitude, longitude, callback);
+  }
+
   function showInfoWindow(marker, latitude, longitude, contents = '', infoWindowRemovable) {
     let iwPosition = new kakao.maps.LatLng(latitude, longitude);
 

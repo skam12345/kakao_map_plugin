@@ -238,4 +238,10 @@ class KakaoMapController {
  specificSetPositionMarker({Marker? before, Marker? marker}) async {
     await _webViewController.runJavaScript("specificSetPositionMarker($before, $marker);");
  }
+
+ getAddress({LatLng? latLng}) async {
+  final address = await _webViewController.runJavaScript("getAddress('$latLng');");
+  
+  return address;
+ }
 }
