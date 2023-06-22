@@ -619,6 +619,31 @@ class _KakaoMapState extends State<KakaoMap> {
     customOverlays[index].setMap(map);   
   }
 
+  function setCurrentMarker(index, markerId, latLng, draggable, width = 24, height = 30, offsetX = 0, offsetY = 0, imageSrc = '', infoWindowText = '', infoWindowRemovable = true, infoWindowFirstShow) {
+    latLng = JSON.parse(latLng);
+    let markerPosition = new kakao.maps.LatLng(latLng.latitude, latLng.longitude); // 마커가 표시될 위치입니다
+
+    markers[index].setMap(null);
+    
+    markers[inedx] = new kakao.maps.Marker({
+      position: markerPosition,
+    });
+
+    marker['id'] = markerId;
+
+
+    // 마커가 지도 위에 표시되도록 설정합니다
+    markers[index].setMap(map);
+
+    if (imageSrc !== '' && imageSrc !== 'null') {
+      let imageSize = new kakao.maps.Size(width, height); // 마커이미지의 크기입니다
+      let imageOption = {offset: new kakao.maps.Point(offsetX, offsetY)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+
+      let markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption);
+      marker.setImage(markerImage);
+    }
+  }
+
   function addCustomOverlay(customOverlayId, latLng, content, isClickable, zIndex, index) {
     
     latLng = JSON.parse(latLng);
@@ -647,20 +672,6 @@ class _KakaoMapState extends State<KakaoMap> {
     customMarker.postMessage(JSON.stringify(result));
   }
 
-  function getAddress(latLng) {
-    let latLngCoord = JSON.parse(latLng);
-    let address = '';
-    searchAddressFromCoords(latLngCoord, function(result, status) {
-      address = result[0].address.address_name;
-    });
-
-    return address;
-  }
-
-  function searchAddressFromCoords(latitude, longitude, callback) {
-    var geocoder = new kakao.maps.services.Geocoder();
-    geocoder.coord2Address(latitude, longitude, callback);
-  }
 
   function showInfoWindow(marker, latitude, longitude, contents = '', infoWindowRemovable) {
     let iwPosition = new kakao.maps.LatLng(latitude, longitude);

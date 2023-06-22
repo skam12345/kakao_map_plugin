@@ -68,6 +68,12 @@ class KakaoMapController {
     }
   }
 
+  setCurrentMarker({Marker? marker}) async {
+    await _webViewController.runJavaScript(
+      "setCurrentMarker('${marker!.markerId}', '${jsonEncode(marker.latLng)}', ${marker.draggable}, '${marker.width}', '${marker.height}', '${marker.offsetX}', '${marker.offsetY}', '${marker.markerImageSrc}', '${marker.infoWindowContent}', ${marker.infoWindowRemovable}, ${marker.infoWindowFirstShow});"
+    );
+  }
+
   /// change marker draggable
   setMarkerDraggable(String markerId, bool draggable) async {
     await _webViewController.runJavaScript("setMarkerDraggable('$markerId', $draggable);");
