@@ -619,13 +619,12 @@ class _KakaoMapState extends State<KakaoMap> {
     });    
 
     customOverlay.setMap(map);
+    var overlay = querySelector(".violate:nth-of-type(index)").style.backgroundColor = "red";
     customOverlays.push(customOverlay);
+  }
 
-    var overlay = document.getElementsByClassName('violate')[index];
+  function addCustomEventListener() {
 
-    overlay.addEventListener('click', function(e) {
-      overlay.style.backgroundColor = "red";
-    });
   }
 
   function showInfoWindow(marker, latitude, longitude, contents = '', infoWindowRemovable) {
