@@ -625,15 +625,17 @@ class _KakaoMapState extends State<KakaoMap> {
   }
 
   function customTap(id, latitude, longitude) {
-    var lat = parseFloat(latitude);
-    var lng = parseFloat(longitude);
+    // var lat = parseFloat(latitude);
+    // var lng = parseFloat(longitude);
 
-    const result = {
-      customid: id,
-      lati: lat,
-      longi: lng,
-    };
-    customMarker.postMessage(JSON.stringify(result));
+    // const result = {
+    //   customid: id,
+    //   lati: lat,
+    //   longi: lng,
+    // };
+    // customMarker.postMessage(JSON.stringify(result));
+    var custom = document.getElementById("marker");
+    custom.style.backgroundColor = "red";
   }
 
 
