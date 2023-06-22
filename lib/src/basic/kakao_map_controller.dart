@@ -85,6 +85,11 @@ class KakaoMapController {
     }
   }
 
+  setCurrentCustomOverlay({int? index, CustomOverlay? customOverlay}) async {
+    await _webViewController.runJavaScript(
+      "setCurrentCustomOverlay($index, '${customOverlay!.customOverlayId}', '${jsonEncode(customOverlay.latLng)}', '${customOverlay.content}', '${customOverlay.isClickable}', '${customOverlay.zIndex}')");
+  }
+
   addClusterer() async {
     await _webViewController.runJavaScript(
       "addClusterer()"
