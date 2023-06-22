@@ -617,9 +617,9 @@ class _KakaoMapState extends State<KakaoMap> {
       yAnchor: 1,
       zIndex: zIndex
     });    
-
+    var ind = Number(index);
     customOverlay.setMap(map);
-    var overlay = querySelector(".violate:nth-of-type(index)").style.backgroundColor = "red";
+    var overlay = querySelector(".violate:nth-of-type(" +ind + ")").style.backgroundColor = "red";
     customOverlays.push(customOverlay);
   }
 
