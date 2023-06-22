@@ -622,11 +622,18 @@ class _KakaoMapState extends State<KakaoMap> {
     customOverlay.setMap(map);
 
     customOverlays.push(customOverlay);
-    
-    var overlays = document.querySelectorAll(".marker");
-    [].forEach.call(overlays, function(overlay) {
-      overlay.style.backgroundColor = "red";
-    });
+  }
+
+  function customTap(id, latitude, longitude) {
+    var lat = parseFloat(latitude);
+    var lng = parseFloat(longitude);
+
+    const result = {
+      customid: id,
+      lati: lat,
+      longi: lng,
+    };
+    customMarker.postMessage(JSON.stringify(result));
   }
 
 
