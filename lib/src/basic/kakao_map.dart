@@ -624,7 +624,7 @@ class _KakaoMapState extends State<KakaoMap> {
     customOverlays.push(customOverlay);
   }
 
-  function customTap(id, latitude, longitude) {
+  function customTap(id) {
     // var lat = parseFloat(latitude);
     // var lng = parseFloat(longitude);
 
