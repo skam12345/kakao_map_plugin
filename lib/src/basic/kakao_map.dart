@@ -621,16 +621,11 @@ class _KakaoMapState extends State<KakaoMap> {
     customOverlay.setMap(map);
     customOverlays.push(customOverlay);
 
-    var overlay = document.getElementsByClassName('violate');
+    var overlay = document.getElementsByClassName('violate')[index];
 
     overlay.addEventListener('click', function(e) {
       overlay.style.backgroundColor = "red";
     });
-
-    var otherOverlay = document.getElementsByClassName('other-violate')[index];
-    otherOverlay.addEventListener('click', function(e) {
-      otherOverlay.style.backgroundColor = "red";
-    }); 
   }
 
   function showInfoWindow(marker, latitude, longitude, contents = '', infoWindowRemovable) {
