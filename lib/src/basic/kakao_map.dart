@@ -624,16 +624,20 @@ class _KakaoMapState extends State<KakaoMap> {
     let markerPosition = new kakao.maps.LatLng(latLng.latitude, latLng.longitude); // 마커가 표시될 위치입니다
 
     markers[index].setMap(null);
-    
-    markers[inedx] = new kakao.maps.Marker({
+    markers.splice(index);
+
+    let marker = new kakao.maps.Marker({
       position: markerPosition,
     });
 
     marker['id'] = markerId;
 
 
+
     // 마커가 지도 위에 표시되도록 설정합니다
-    markers[index].setMap(map);
+    marker.setMap(map);
+
+    markers.push(marker);
 
     if (imageSrc !== '' && imageSrc !== 'null') {
       let imageSize = new kakao.maps.Size(width, height); // 마커이미지의 크기입니다
