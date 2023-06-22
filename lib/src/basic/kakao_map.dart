@@ -12,7 +12,7 @@ class KakaoMap extends StatefulWidget {
   final OnCenterChangeCallback? onCenterChangeCallback;
   final OnBoundsChangeCallback? onBoundsChangeCallback;
   final OnTilesLoadedCallback? onTilesLoadedCallback;
-  final CustomTap? customTap;
+  final CustomTap customTap;
   final bool? mapTypeControl;
   final ControlPosition mapTypeControlPosition;
   final bool? zoomControl;
@@ -43,7 +43,7 @@ class KakaoMap extends StatefulWidget {
     this.onCenterChangeCallback,
     this.onBoundsChangeCallback,
     this.onTilesLoadedCallback,
-    this.customTap,
+    required this.customTap,
     this.mapTypeControl = false,
     this.mapTypeControlPosition = ControlPosition.topRight,
     this.zoomControl = false,
