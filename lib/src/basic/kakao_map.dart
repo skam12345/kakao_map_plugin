@@ -602,7 +602,7 @@ class _KakaoMapState extends State<KakaoMap> {
     });
   }
 
-  function addCustomOverlay(customOverlayId, latLng, content, isClickable, zIndex) {
+  function addCustomOverlay(customOverlayId, latLng, content, isClickable, zIndex, index) {
     
     latLng = JSON.parse(latLng);
     let markerPosition = new kakao.maps.LatLng(latLng.latitude, latLng.longitude); // 마커가 표시될 위치입니다
@@ -616,28 +616,18 @@ class _KakaoMapState extends State<KakaoMap> {
       xAnchor: 0.5,
       yAnchor: 1,
       zIndex: zIndex
-    });
-    
+    });    
 
     customOverlay.setMap(map);
 
-    customOverlays.push(customOverlay);
+    var overlay = document.getElementsByClassName('violate')[index];
+
+    overlay.addEventListener('click', function(e) {
+      overlay.style.backgroundColor = "red";
+    });
+
+    customOverlays.push(customOverlay); 
   }
-
-  function customTap(id, index) {
-    // var lat = parseFloat(latitude);
-    // var lng = parseFloat(longitude);
-
-    // const result = {
-    //   customid: id,
-    //   lati: lat,
-    //   longi: lng,
-    // };
-    // customMarker.postMessage(JSON.stringify(result));
-    var custom = document.getElementById("marker");
-    custom.style.backgroundColor = "red";
-  }
-
 
   function showInfoWindow(marker, latitude, longitude, contents = '', infoWindowRemovable) {
     let iwPosition = new kakao.maps.LatLng(latitude, longitude);

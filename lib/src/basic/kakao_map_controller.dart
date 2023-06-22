@@ -78,9 +78,9 @@ class KakaoMapController {
     if (customOverlays != null) {
         
       clearCustomOverlay();
-      for (var customOverlay in customOverlays) {
+      for (int i = 0; i < customOverlays.length; i++) {
         await _webViewController.runJavaScript(
-            "addCustomOverlay('${customOverlay.customOverlayId}', '${jsonEncode(customOverlay.latLng)}', '${customOverlay.content}', '${customOverlay.isClickable}', '${customOverlay.zIndex}')");
+            "addCustomOverlay('${customOverlays[i].customOverlayId}', '${jsonEncode(customOverlays[i].latLng)}', '${customOverlays[i].content}', '${customOverlays[i].isClickable}', '${customOverlays[i].zIndex}', '$i')");
       }
     }
   }
