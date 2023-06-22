@@ -33,4 +33,4 @@ typedef OnBoundsChangeCallback = void Function(LatLngBounds latLngBounds);
 /// kakao map tile load cllback
 typedef OnTilesLoadedCallback = void Function(LatLng latLng, int zoomLevel);
 
-typedef CustomTap = void Function(String customOverlayId, LatLng latlng);
+typedef CustomTap = void Function(int index);

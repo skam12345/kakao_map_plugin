@@ -618,8 +618,16 @@ class _KakaoMapState extends State<KakaoMap> {
       zIndex: zIndex
     });    
     customOverlay.setMap(map);
-    let overlay = document.getElementById("violate" + index).style.backgroundColor = "red";
     customOverlays.push(customOverlay);
+  }
+
+  function customTap(index) {
+    const result = {
+      op: index,
+    };
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    //@ts-ignore
+    customMarker.postMessage(JSON.stringify(result));
   }
 
   function showInfoWindow(marker, latitude, longitude, contents = '', infoWindowRemovable) {
@@ -957,8 +965,7 @@ class _KakaoMapState extends State<KakaoMap> {
       ..addJavaScriptChannel('customMarker', onMessageReceived: (JavaScriptMessage result) {
         if(widget.customTap != null) {
           widget.customTap!(
-            jsonDecode(result.message)['id'],
-            LatLng.fromJson(jsonDecode(result.message)),
+            jsonDecode(result.message)['op'],
           );
         }
       });
