@@ -619,7 +619,7 @@ class _KakaoMapState extends State<KakaoMap> {
     });    
     var ind = Number(index);
     customOverlay.setMap(map);
-    var overlay = querySelector(".violate:nth-of-type(" +ind + ")").style.backgroundColor = "red";
+    var overlay = document.querySelector(".violate:nth-of-type(" +ind + ")").style.backgroundColor = "red";
     customOverlays.push(customOverlay);
   }
 
