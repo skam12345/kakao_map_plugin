@@ -70,7 +70,7 @@ class KakaoMapController {
 
   setCurrentMarker({int? index, Marker? marker}) async {
     await _webViewController.runJavaScript(
-      "setCurrentMarker('${marker!.markerId}', '${jsonEncode(marker.latLng)}', ${marker.draggable}, '${marker.width}', '${marker.height}', '${marker.offsetX}', '${marker.offsetY}', '${marker.markerImageSrc}', '${marker.infoWindowContent}', ${marker.infoWindowRemovable}, ${marker.infoWindowFirstShow});"
+      "setCurrentMarker($index, '${marker!.markerId}', '${jsonEncode(marker.latLng)}', ${marker.draggable}, '${marker.width}', '${marker.height}', '${marker.offsetX}', '${marker.offsetY}', '${marker.markerImageSrc}', '${marker.infoWindowContent}', ${marker.infoWindowRemovable}, ${marker.infoWindowFirstShow});"
     );
   }
 
