@@ -7,6 +7,10 @@ class KakaoMapController {
 
   KakaoMapController(this._webViewController);
 
+  positionToAddress({LatLng? latLng}) async {
+    final address = await _webViewController.runJavaScriptReturningResult("positionToAddress('${jsonEncode(latLng)}');") as String;
+    return address;
+  }
   /// draw polylines
   addPolyline({List<Polyline>? polylines}) async {
     if (polylines != null) {

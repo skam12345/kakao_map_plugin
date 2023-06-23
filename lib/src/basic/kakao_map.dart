@@ -120,7 +120,7 @@ class _KakaoMapState extends State<KakaoMap> {
   let customOverlays = [];
   let clusterer = null;
   const defaultCenter = new kakao.maps.LatLng(33.450701, 126.570667);
-
+  let geocoder = new kakao.maps.services.Geocoder();
   window.onload = function () {
     const container = document.getElementById('map');
     let center = defaultCenter;
@@ -291,6 +291,20 @@ class _KakaoMapState extends State<KakaoMap> {
     onMapCreated.postMessage({"test": 1});
   }
 
+  function positionToAddress(latLng) {
+    let position = JSON.parse(latLng);
+    let address = '';
+    let callback = function(result, status) {
+      if(status === kakao.maps.services.Status.OK) {
+        address = result[0].aaddress.address_name;
+      }
+    }
+
+    geocoder.coord2Address(position.longitude, position.latitude, callback);
+    
+    return address;
+  }
+
 
   function clearPolyline() {
     for (let i = 0; i < polylines.length; i++) {
@@ -307,6 +321,7 @@ class _KakaoMapState extends State<KakaoMap> {
 
     circles = [];
   }
+
 
   function clearPolygon() {
     for (let i = 0; i < polygons.length; i++) {
