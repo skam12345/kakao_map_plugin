@@ -606,6 +606,7 @@ class _KakaoMapState extends State<KakaoMap> {
     latLng = JSON.parse(latLng);
     let markerPosition = new kakao.maps.LatLng(latLng.latitude, latLng.longitude); // 마커가 표시될 위치입니다
     customOverlays[index].setMap(null);
+    customOverlays.splice(index);
     let customOverlay = new kakao.maps.CustomOverlay({
       map: map,
       clickable: isClickable,
@@ -615,8 +616,8 @@ class _KakaoMapState extends State<KakaoMap> {
       yAnchor: 1,
       zIndex: zIndex
     });
-    customOverlays[index] = customOverlay;
-    customOverlays[index].setMap(map);   
+    customOverlay.setMap(map);
+    customOverlays.push(customOverlay);   
   }
 
   function setCurrentMarker(index, markerId, latLng, draggable, width = 24, height = 30, offsetX = 0, offsetY = 0, imageSrc = '', infoWindowText = '', infoWindowRemovable = true, infoWindowFirstShow) {
