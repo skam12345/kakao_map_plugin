@@ -45,7 +45,6 @@ String _htmlWrapper(String script) {
       background-size: 100% 100%;
     }
     .numbering01 {
-      font-size: 15pt;
       font-weight: bolder;
       margin-top: 5px;
       color: white;
