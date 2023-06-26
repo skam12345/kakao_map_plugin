@@ -121,7 +121,7 @@ class _KakaoMapState extends State<KakaoMap> {
   let clusterer = null;
   let address = '';
   const defaultCenter = new kakao.maps.LatLng(33.450701, 126.570667);
-  let geocoder = new kakao.maps.services.Geocoder();
+  var geocoder = new kakao.maps.services.Geocoder();
   window.onload = function () {
     const container = document.getElementById('map');
     let center = defaultCenter;
@@ -296,7 +296,7 @@ class _KakaoMapState extends State<KakaoMap> {
     let position = JSON.parse(latLng);
     let callback = function(result, status) {
       if(status === kakao.maps.services.Status.OK) {
-        address = result[0].aaddress.address_name;
+        address = result[0].address.address_name;
       }
     }
 
