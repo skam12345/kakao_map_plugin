@@ -294,7 +294,8 @@ class _KakaoMapState extends State<KakaoMap> {
 
   function positionToAddress(latLng) {
     let position = JSON.parse(latLng);
-    let callback = function(result, status) {
+    let callback = (result, status) => {
+      Address.postMessage({"status": status, "result": result});
       if(status === kakao.maps.services.Status.OK) {
         address = result[0].address.address_name;
       }
@@ -1033,6 +1034,9 @@ class _KakaoMapState extends State<KakaoMap> {
             jsonDecode(result.message)['op'],
           );
         }
+      })
+      ..addJavaScriptChannel("Address", onMessageReceived: (JavaScriptMessage result) {
+        print("status : ${jsonDecode(result.message)['status']}, result : ${jsonDecode(result.message)['data']}");
       });
   }
 }

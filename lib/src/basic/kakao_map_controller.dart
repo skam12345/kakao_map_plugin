@@ -12,7 +12,7 @@ class KakaoMapController {
   }
 
   Future<String> getAddress() async {
-    final address = await _webViewController.runJavaScriptReturningResult("getAddress()");
+    final address = await _webViewController.runJavaScriptReturningResult("getAddress();");
 
     return address.toString();
   }
