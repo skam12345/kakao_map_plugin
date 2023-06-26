@@ -8,7 +8,7 @@ class KakaoMapController {
   KakaoMapController(this._webViewController);
 
   positionToAddress({LatLng? latLng}) async {
-    await _webViewController.runJavaScriptReturningResult("positionToAddress('${jsonEncode(latLng)}');") as String;
+    await _webViewController.runJavaScript("positionToAddress('${jsonEncode(latLng)}');") as String;
   }
 
   getAddress() async {
