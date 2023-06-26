@@ -8,7 +8,12 @@ class KakaoMapController {
   KakaoMapController(this._webViewController);
 
   positionToAddress({LatLng? latLng}) async {
-    final address = await _webViewController.runJavaScriptReturningResult("positionToAddress('${jsonEncode(latLng)}');") as String;
+    await _webViewController.runJavaScriptReturningResult("positionToAddress('${jsonEncode(latLng)}');") as String;
+  }
+
+  getAddress() async {
+    final address = await _webViewController.runJavaScriptReturningResult("getAddress()");
+
     return address;
   }
   /// draw polylines
@@ -254,9 +259,4 @@ class KakaoMapController {
     await _webViewController.runJavaScript("specificSetPositionMarker($before, $marker);");
  }
 
- getAddress({LatLng? latLng}) async {
-  final address = await _webViewController.runJavaScript("getAddress('$latLng');");
-  
-  return address;
- }
 }
